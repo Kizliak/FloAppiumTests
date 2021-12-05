@@ -15,6 +15,8 @@ namespace FloAppiumTests.Pages
 
         private readonly By _acceptAllLink = By.Id("org.iggymedia.periodtracker:id/acceptAllButton");
         private readonly By _NextButton = By.Id("org.iggymedia.periodtracker:id/nextButton");
+        private readonly By _privacyTermsCheckBox = By.Id("org.iggymedia.periodtracker:id/privacyTermsCheck");
+        private readonly By _healthDataCheckBox = By.Id("org.iggymedia.periodtracker:id/healthDataCheck");
 
         public StartPage AcceptAllPrivacy()
         {
@@ -26,6 +28,47 @@ namespace FloAppiumTests.Pages
         {
             _driver.FindElement(_NextButton).Click();
             return this;
+        }
+
+        public bool CheckIfNextButtonIsEnabled()
+        {
+            if (_driver.FindElement(_NextButton).Enabled)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public StartPage SelectPrivacyTermsCheckBox()
+        {
+            _driver.FindElement(_privacyTermsCheckBox).Click();
+            return this;
+        }
+
+        public StartPage SelectHealthDataCheckBox()
+        {
+            _driver.FindElement(_healthDataCheckBox).Click();
+            return this;
+        }
+
+        public bool CheckIfCheckBoxIsSelected(int checkboxNumber)
+        {
+            bool result = false;
+            if (checkboxNumber == 1)
+            {
+                if (_driver.FindElement(_privacyTermsCheckBox).Selected)
+                {
+                    result = true;
+                }
+            }
+            else if (checkboxNumber == 2)
+            {
+                if (_driver.FindElement(_healthDataCheckBox).Selected)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }
