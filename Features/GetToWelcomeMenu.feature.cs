@@ -118,12 +118,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("I selecet only first of 2 needed checkboxes")]
-        public virtual void ISelecetOnlyFirstOf2NeededCheckboxes()
+        [NUnit.Framework.DescriptionAttribute("I select only first of 2 needed checkboxes")]
+        public virtual void ISelectOnlyFirstOf2NeededCheckboxes()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I selecet only first of 2 needed checkboxes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I select only first of 2 needed checkboxes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -158,12 +158,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("I selecet only second of 2 needed checkboxes")]
-        public virtual void ISelecetOnlySecondOf2NeededCheckboxes()
+        [NUnit.Framework.DescriptionAttribute("I select only second of 2 needed checkboxes")]
+        public virtual void ISelectOnlySecondOf2NeededCheckboxes()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I selecet only second of 2 needed checkboxes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I select only second of 2 needed checkboxes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
