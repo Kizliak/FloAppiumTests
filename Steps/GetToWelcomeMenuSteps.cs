@@ -66,11 +66,11 @@ namespace FloAppiumTests.Features
         {
             if (checkboxText == "I agree to Privacy Policy")
             {
-                _startPage.SelectPrivacyTermsCheckBox();
+                Assert.IsTrue(_startPage.CheckIfCheckBoxIsSelected(1));
             }
             else if (checkboxText == "I agree to processing of my personal health")
             {
-                _startPage.SelectHealthDataCheckBox();
+                Assert.IsTrue(_startPage.CheckIfCheckBoxIsSelected(2));
             }
         }
 
