@@ -80,5 +80,13 @@ namespace FloAppiumTests.Features
             Assert.IsFalse(_startPage.CheckIfNextButtonIsEnabled());
         }
 
+        [Given(@"Welcome menu is open")]
+        public void GivenWelcomeMenuIsOpen()
+        {
+            _startPage.AcceptAllPrivacy();
+            _startPage.ClickNextButton();
+            _allowToTrackPage.ClickNoTrackLink();
+        }
+
     }
 }
