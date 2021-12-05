@@ -47,5 +47,38 @@ namespace FloAppiumTests.Features
         {
             Assert.AreEqual(welcomeText,_welcomePage.IsWelcomeTextExsist());
         }
+
+        [When(@"I tap on agree checkbox '(.*)'")]
+        public void WhenITapOnAgreeCheckbox(string checkboxText)
+        {
+            if (checkboxText == "I agree to Privacy Policy")
+            {
+                _startPage.SelectPrivacyTermsCheckBox();
+            }
+            else if (checkboxText == "I agree to processing of my personal health")
+            {
+                _startPage.SelectHealthDataCheckBox();
+            }
+        }
+
+        [Then(@"'(.*)' checkbox is selected")]
+        public void ThenIsChecked(string checkboxText)
+        {
+            if (checkboxText == "I agree to Privacy Policy")
+            {
+                _startPage.SelectPrivacyTermsCheckBox();
+            }
+            else if (checkboxText == "I agree to processing of my personal health")
+            {
+                _startPage.SelectHealthDataCheckBox();
+            }
+        }
+
+        [Then(@"'(.*)' button is not active")]
+        public void ThenButtonIsNotActive(string p0)
+        {
+            Assert.IsFalse(_startPage.CheckIfNextButtonIsEnabled());
+        }
+
     }
 }
