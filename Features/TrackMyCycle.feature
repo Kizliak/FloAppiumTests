@@ -10,3 +10,5 @@ Scenario: Check if it is possible to run the app in the Track my cycle mode from
 	When I tap on Track my cycle button
 	When I tap on I don't remember checkbox
 	When I tap on don't remember Next button
+	When I swipe from Select to one position up
+	When I tap on year born Next button

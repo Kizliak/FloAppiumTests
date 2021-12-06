@@ -14,6 +14,7 @@ namespace FloAppiumTests.Steps
         private readonly WelcomePage _welcomePage;
         private readonly WhenDidYourLastPeriodStartPage _whenDidYourLastPeriodStartPage;
         private readonly DontRememberLastPeriodFirstDayPage _dontRememberLastPeriodFirstDayPage;
+        private readonly WhatYearWereYouBornPage _whatYearWereYouBornPage;
 
         public TrackMyCycleSteps(ScenarioContext scenarioContext)
         {
@@ -22,6 +23,7 @@ namespace FloAppiumTests.Steps
             _welcomePage = new WelcomePage(_driver);
             _whenDidYourLastPeriodStartPage = new WhenDidYourLastPeriodStartPage(_driver);
             _dontRememberLastPeriodFirstDayPage = new DontRememberLastPeriodFirstDayPage(_driver);
+            _whatYearWereYouBornPage = new WhatYearWereYouBornPage(_driver);
         }
 
         [When(@"I tap on Track my cycle button")]
@@ -40,6 +42,18 @@ namespace FloAppiumTests.Steps
         public void WhenITapOnDonTRememberNextButton()
         {
             _dontRememberLastPeriodFirstDayPage.ClickIntroScreenNext();
+        }
+
+        [When(@"I swipe from Select to one position up")]
+        public void WhenISwipeFromSelectToOnePositionUp()
+        {
+            _whatYearWereYouBornPage.verticalSwipeFromElementCenter();
+        }
+
+        [When(@"I tap on year born Next button")]
+        public void WhenITapOnYearBornNextButton()
+        {
+            _whatYearWereYouBornPage.ClickIntroScreenNextButton();
         }
 
     }
