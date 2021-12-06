@@ -131,6 +131,9 @@ this.FeatureBackground();
 #line 14
  testRunner.When("I tap on year born Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 15
+ testRunner.When("I tap on My cycle is regular button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

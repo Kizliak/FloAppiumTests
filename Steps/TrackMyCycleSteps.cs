@@ -15,6 +15,7 @@ namespace FloAppiumTests.Steps
         private readonly WhenDidYourLastPeriodStartPage _whenDidYourLastPeriodStartPage;
         private readonly DontRememberLastPeriodFirstDayPage _dontRememberLastPeriodFirstDayPage;
         private readonly WhatYearWereYouBornPage _whatYearWereYouBornPage;
+        private readonly IsYourMenstrualCycleRegularPage _isYourMenstrualCycleRegularPage;
 
         public TrackMyCycleSteps(ScenarioContext scenarioContext)
         {
@@ -24,6 +25,7 @@ namespace FloAppiumTests.Steps
             _whenDidYourLastPeriodStartPage = new WhenDidYourLastPeriodStartPage(_driver);
             _dontRememberLastPeriodFirstDayPage = new DontRememberLastPeriodFirstDayPage(_driver);
             _whatYearWereYouBornPage = new WhatYearWereYouBornPage(_driver);
+            _isYourMenstrualCycleRegularPage = new IsYourMenstrualCycleRegularPage(_driver);
         }
 
         [When(@"I tap on Track my cycle button")]
@@ -54,6 +56,12 @@ namespace FloAppiumTests.Steps
         public void WhenITapOnYearBornNextButton()
         {
             _whatYearWereYouBornPage.ClickIntroScreenNextButton();
+        }
+
+        [When(@"I tap on My cycle is regular button")]
+        public void WhenITapOnMyCycleIsRegularButton()
+        {
+            _isYourMenstrualCycleRegularPage.ClickAnswerFirstButton();
         }
 
     }
