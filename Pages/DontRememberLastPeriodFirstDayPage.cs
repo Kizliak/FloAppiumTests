@@ -13,11 +13,11 @@ namespace FloAppiumTests.Pages
             _driver = webDriver;
         }
 
-        private readonly By _introScreenNext = By.Id("org.iggymedia.periodtracker:id/introScreenNext");
+        private readonly By _introScreenNextButton = By.Id("org.iggymedia.periodtracker:id/introScreenNext");
 
-        public DontRememberLastPeriodFirstDayPage ClickIntroScreenNext()
+        public DontRememberLastPeriodFirstDayPage ClickIntroScreenNextButton()
         {
-            _driver.FindElement(_introScreenNext).Click();
+            _driver.FindElement(_introScreenNextButton).Click();
             return this;
         }
     }

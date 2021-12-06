@@ -15,7 +15,11 @@ namespace FloAppiumTests.Steps
         private readonly WhenDidYourLastPeriodStartPage _whenDidYourLastPeriodStartPage;
         private readonly DontRememberLastPeriodFirstDayPage _dontRememberLastPeriodFirstDayPage;
         private readonly WhatYearWereYouBornPage _whatYearWereYouBornPage;
-        private readonly IsYourMenstrualCycleRegularPage _isYourMenstrualCycleRegularPage;
+        private readonly StartAppAnswersPage _startAppAnswersPage;
+        private readonly CreatingYourPersonalProgramPage _creatingYourPersonalProgramPage;
+        private readonly WelcomeModePage _welcomeModePage;
+        private readonly ChooseYourPlanWebPage _chooseYourPlanWebPage;
+
 
         public TrackMyCycleSteps(ScenarioContext scenarioContext)
         {
@@ -25,7 +29,9 @@ namespace FloAppiumTests.Steps
             _whenDidYourLastPeriodStartPage = new WhenDidYourLastPeriodStartPage(_driver);
             _dontRememberLastPeriodFirstDayPage = new DontRememberLastPeriodFirstDayPage(_driver);
             _whatYearWereYouBornPage = new WhatYearWereYouBornPage(_driver);
-            _isYourMenstrualCycleRegularPage = new IsYourMenstrualCycleRegularPage(_driver);
+            _startAppAnswersPage = new StartAppAnswersPage(_driver);
+            _welcomeModePage = new WelcomeModePage(_driver);
+            _chooseYourPlanWebPage = new ChooseYourPlanWebPage(_driver);
         }
 
         [When(@"I tap on Track my cycle button")]
@@ -43,13 +49,13 @@ namespace FloAppiumTests.Steps
         [When(@"I tap on don't remember Next button")]
         public void WhenITapOnDonTRememberNextButton()
         {
-            _dontRememberLastPeriodFirstDayPage.ClickIntroScreenNext();
+            _dontRememberLastPeriodFirstDayPage.ClickIntroScreenNextButton();
         }
 
         [When(@"I swipe from Select to one position up")]
         public void WhenISwipeFromSelectToOnePositionUp()
         {
-            _whatYearWereYouBornPage.verticalSwipeFromElementCenter();
+            _whatYearWereYouBornPage.verticalSwipeFromYearElementCenter();
         }
 
         [When(@"I tap on year born Next button")]
@@ -58,11 +64,34 @@ namespace FloAppiumTests.Steps
             _whatYearWereYouBornPage.ClickIntroScreenNextButton();
         }
 
-        [When(@"I tap on My cycle is regular button")]
-        public void WhenITapOnMyCycleIsRegularButton()
+        [When(@"I tap on '(.*)' answer button")]
+        public void WhenITapOnAnswerButton(string textButton)
         {
-            _isYourMenstrualCycleRegularPage.ClickAnswerFirstButton();
+            _startAppAnswersPage.ClickAnswerButton(textButton);
         }
 
+        [When(@"I tap on Next answer button")]
+        public void WhenITapOnNextAnswerButton()
+        {
+            _startAppAnswersPage.ClickNextButton();
+        }
+
+        [When(@"I tap on No button on Do you take supplements")]
+        public void WhenITapOnNoButtonOnDoYouTakeSupplements()
+        {
+            _creatingYourPersonalProgramPage.ClickDontTakeSapplementsButton();
+        }
+
+        [When(@"I tap on Welcome mode page Next button")]
+        public void WhenITapOnMeetFloNextButton()
+        {
+            _welcomeModePage.ClickFeatureCardPrimaryActionButton();
+        }
+
+        [When(@"I tap on Choose your plan X button")]
+        public void WhenITapOnChooseYourPlanXButton()
+        {
+            _chooseYourPlanWebPage.ClickCloseButton();
+        }
     }
 }

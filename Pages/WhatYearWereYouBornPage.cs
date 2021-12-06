@@ -8,10 +8,12 @@ namespace FloAppiumTests.Pages
     class WhatYearWereYouBornPage
     {
         private readonly AppiumDriver<AndroidElement> _driver;
+        private readonly Helper _helper;
 
         public WhatYearWereYouBornPage(AppiumDriver<AndroidElement> webDriver)
         {
             _driver = webDriver;
+            _helper = new Helper(_driver);
         }
 
         private readonly By _introPickerBlock = By.Id("org.iggymedia.periodtracker:id/introPicker");
@@ -23,20 +25,9 @@ namespace FloAppiumTests.Pages
             return this;
         }
 
-        public WhatYearWereYouBornPage verticalSwipeFromElementCenter()
+        public WhatYearWereYouBornPage verticalSwipeFromYearElementCenter()
         {
-            var elementCoordinates = _driver.FindElement(_introPickerBlock).Coordinates;
-            int elementXCoordinate = elementCoordinates.LocationInDom.X;
-            int elementYCoordinate = elementCoordinates.LocationInDom.Y;
-            var elementSize = _driver.FindElement(_introPickerBlock).Size;
-            int elementWidth = elementSize.Width;
-            int elementHeight = elementSize.Height;
-            new TouchAction(_driver)
-                .Press(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 2)
-                //.Wait(1000)
-                .MoveTo(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 1.3)
-                .Release()
-                .Perform();
+            _helper.verticalSwipeFromElementCenter(_introPickerBlock);
             return this;
         }
     }
