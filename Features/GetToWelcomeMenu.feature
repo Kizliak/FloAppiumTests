@@ -11,10 +11,8 @@ Scenario: Accept all rules and decline info tracking
 
 Scenario: I select only first of 2 needed checkboxes
 	When I tap on agree checkbox 'I agree to Privacy Policy'
-	Then 'I agree to Privacy Policy' checkbox is selected
 	Then 'Next' button is not active
 
 Scenario: I select only second of 2 needed checkboxes
 	When I tap on agree checkbox 'I agree to processing of my personal health'
-	Then 'I agree to processing of my personal health' checkbox is selected
 	Then 'Next' button is not active

@@ -16,6 +16,7 @@ namespace FloAppiumTests.Pages
 
         private readonly By _welcomeText = By.Id("org.iggymedia.periodtracker:id/introScreenTitle");
         private readonly By _wantTrackCycleButton = By.Id("org.iggymedia.periodtracker:id/wantTrackCycle");
+        private readonly By _pregnancyButton = By.Id("org.iggymedia.periodtracker:id/wantTrackPregnancy");
 
         public string IsWelcomeTextExsist()
         {
@@ -25,6 +26,12 @@ namespace FloAppiumTests.Pages
         public WelcomePage ClickWantTrackCycleButton()
         {
             _driver.FindElement(_wantTrackCycleButton).Click();
+            return this;
+        }
+      
+        public WelcomePage PregnancyButtonClick()
+        {
+            _driver.FindElement(_pregnancyButton).Click();
             return this;
         }
     }

@@ -3,6 +3,7 @@ using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow;
 using FloAppiumTests.Pages;
 using NUnit.Framework;
+using System.Threading;
 
 namespace FloAppiumTests.Features
 {
@@ -59,6 +60,7 @@ namespace FloAppiumTests.Features
             {
                 _startPage.SelectHealthDataCheckBox();
             }
+            Thread.Sleep(2000);
         }
 
         [Then(@"'(.*)' checkbox is selected")]
