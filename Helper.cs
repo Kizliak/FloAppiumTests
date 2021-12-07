@@ -14,7 +14,7 @@ namespace FloAppiumTests
             _driver = webDriver;
         }
 
-        public Helper verticalSwipeFromElementCenter(By element)
+        public Helper VerticalSwipeFromElementCenter(By element)
         {
             var elementCoordinates = _driver.FindElement(element).Coordinates;
             int elementXCoordinate = elementCoordinates.LocationInDom.X;

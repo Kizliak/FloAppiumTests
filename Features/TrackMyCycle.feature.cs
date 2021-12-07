@@ -85,10 +85,26 @@ namespace FloAppiumTests.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check if it is possible to run the app in the Track my cycle mode from the Welcom" +
             "e menu")]
-        public virtual void CheckIfItIsPossibleToRunTheAppInTheTrackMyCycleModeFromTheWelcomeMenu()
+        [NUnit.Framework.TestCaseAttribute("My cycle is regular", "Painful menstrual cramps", "Yes", "No, I sleep well", "Nothing, I\'m totally fine", "Nothing, I\'m totally satisfied", "None", "None, I have perfect skin", null)]
+        [NUnit.Framework.TestCaseAttribute("My cycle is irregular", "PMS symptoms", "No", "Difficulty falling asleep", "Stress", "I\'m not sexually active now", "Lose weight", "Acne and blemishes", null)]
+        [NUnit.Framework.TestCaseAttribute("I don\'t know", "Unusual discharge", "No, but I used to", "Waking up tired", "Mood fluctuations", "Painful sex", "Gain weight", "Dark spots and pores", null)]
+        [NUnit.Framework.TestCaseAttribute("My cycle is regular", "Heavy menstrual flow", "I don\'t know", "Waking up during the night", "Anxiety", "Difficulty with orgasm", "Maintain healthy weight", "Dryness", null)]
+        [NUnit.Framework.TestCaseAttribute("My cycle is irregular", "Mood swings", "Yes", "Lack of sleep schedule", "Depressed mood", "Low libido", "Start exercising", "Fine lines and wrinkles", null)]
+        [NUnit.Framework.TestCaseAttribute("I don\'t know", "Other", "No", "Insomnia", "Low energy", "Communication", "Learn about nutrition", "Dullness and texture", null)]
+        [NUnit.Framework.TestCaseAttribute("My cycle is regular", "No, nothing bothers me", "No, but I used to", "Other", "Poor self-image", "Poor body image", "Get more energy", "Other", null)]
+        [NUnit.Framework.TestCaseAttribute("My cycle is irregular", "Painful menstrual cramps", "I don\'t know", "No, I sleep well", "Other", "Other", "Other", "None, I have perfect skin", null)]
+        public virtual void CheckIfItIsPossibleToRunTheAppInTheTrackMyCycleModeFromTheWelcomeMenu(string isYourCycleRegular, string doYouExperienceDiscomfort, string haveReproductiveDisorders, string isYouWantToImproveSleep, string areThereMentalHealth, string whatChangeAboutSex, string whatFitnessGoal, string anythingToChangeAboutSkin, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Is your cycle regular", isYourCycleRegular);
+            argumentsOfScenario.Add("Do you experience discomfort", doYouExperienceDiscomfort);
+            argumentsOfScenario.Add("Have reproductive disorders", haveReproductiveDisorders);
+            argumentsOfScenario.Add("Is you want to improve sleep", isYouWantToImproveSleep);
+            argumentsOfScenario.Add("Are there mental health", areThereMentalHealth);
+            argumentsOfScenario.Add("What change about sex", whatChangeAboutSex);
+            argumentsOfScenario.Add("What fitness goal", whatFitnessGoal);
+            argumentsOfScenario.Add("Anything to change about skin", anythingToChangeAboutSkin);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if it is possible to run the app in the Track my cycle mode from the Welcom" +
                     "e menu", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
@@ -130,46 +146,46 @@ this.FeatureBackground();
  testRunner.When("I tap on year born Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.When("I tap on \'My cycle is regular\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", isYourCycleRegular), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
- testRunner.When("I tap on \'No, nothing bothers me\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", doYouExperienceDiscomfort), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 17
- testRunner.When("I tap on \'No\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", haveReproductiveDisorders), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
- testRunner.When("I tap on \'No, I sleep well\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", isYouWantToImproveSleep), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
- testRunner.When("I tap on \'Nothing, I\'m totally fine\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", areThereMentalHealth), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
- testRunner.When("I tap on \'Nothing, I\'m totally satisfied\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", whatChangeAboutSex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 23
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 24
- testRunner.When("I tap on \'None\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", whatFitnessGoal), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
- testRunner.When("I tap on \'None, I have perfect skin\' answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I tap on {0} answer button", anythingToChangeAboutSkin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
- testRunner.When("I tap on Next answer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on Next button answer question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 28
  testRunner.When("I tap on No button on Do you take supplements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

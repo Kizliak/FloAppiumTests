@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.MultiTouch;
 
 namespace FloAppiumTests.Pages
 {
@@ -25,9 +24,9 @@ namespace FloAppiumTests.Pages
             return this;
         }
 
-        public WhatYearWereYouBornPage verticalSwipeFromYearElementCenter()
+        public WhatYearWereYouBornPage VerticalSwipeFromYearElementCenter()
         {
-            _helper.verticalSwipeFromElementCenter(_introPickerBlock);
+            _helper.VerticalSwipeFromElementCenter(_introPickerBlock);
             return this;
         }
     }

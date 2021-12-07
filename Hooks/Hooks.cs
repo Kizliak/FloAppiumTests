@@ -26,7 +26,7 @@ namespace FloAppiumTests.Hooks
         public void AfterScenario()
         {
             Thread.Sleep(4000);
-            //_scenarioContext.Get<AndroidDriver<AndroidElement>>("driver").Dispose();
+            _scenarioContext.Get<AndroidDriver<AndroidElement>>("driver").Dispose();
         }
     }
 }

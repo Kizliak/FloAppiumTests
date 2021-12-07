@@ -60,7 +60,7 @@ namespace FloAppiumTests.Steps
         [When(@"I swipe from Select to one position up")]
         public void WhenISwipeFromSelectToOnePositionUp()
         {
-            _whatYearWereYouBornPage.verticalSwipeFromYearElementCenter();
+            _whatYearWereYouBornPage.VerticalSwipeFromYearElementCenter();
         }
 
         [When(@"I tap on year born Next button")]
@@ -69,14 +69,14 @@ namespace FloAppiumTests.Steps
             _whatYearWereYouBornPage.ClickIntroScreenNextButton();
         }
 
-        [When(@"I tap on '(.*)' answer button")]
+        [When(@"I tap on (.*) answer button")]
         public void WhenITapOnAnswerButton(string textButton)
         {
             _startAppAnswersPage.ClickAnswerButton(textButton);
         }
 
-        [When(@"I tap on Next answer button")]
-        public void WhenITapOnNextAnswerButton()
+        [When(@"I tap on Next button answer question")]
+        public void WhenITapOnNextButtonAnswerQuestion()
         {
             _startAppAnswersPage.ClickNextButton();
         }
