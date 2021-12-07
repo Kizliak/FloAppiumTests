@@ -3,13 +3,6 @@ using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.Service;
 using System;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using SeleniumExtras.PageObjects;
 
 namespace FloAppiumTests.Drivers
 {
@@ -42,6 +35,5 @@ namespace FloAppiumTests.Drivers
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             return _driver;
         }
-
     }
 }
