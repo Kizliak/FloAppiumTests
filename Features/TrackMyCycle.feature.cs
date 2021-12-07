@@ -186,6 +186,16 @@ this.FeatureBackground();
 #line 32
  testRunner.When("I tap on Choose your plan X button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 33
+ testRunner.Then("The message \'Log the first day of your last period for better predictions\' appear" +
+                        "s on the Track my cycle mode main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 34
+ testRunner.When("I tap on Track my cycle menu button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 35
+ testRunner.Then("Track cycle button selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

@@ -30,3 +30,6 @@ Scenario: Check if it is possible to run the app in the Track my cycle mode from
 	When I tap on Welcome mode page Next button
 	When I tap on Welcome mode page Next button
 	When I tap on Choose your plan X button
+	Then The message 'Log the first day of your last period for better predictions' appears on the Track my cycle mode main page
+	When I tap on Track my cycle menu button
+	Then Track cycle button selected

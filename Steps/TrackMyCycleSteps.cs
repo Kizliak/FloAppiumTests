@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow;
 using FloAppiumTests.Pages;
+using NUnit.Framework;
 
 namespace FloAppiumTests.Steps
 {
@@ -18,6 +19,8 @@ namespace FloAppiumTests.Steps
         private readonly CreatingYourPersonalProgramPage _creatingYourPersonalProgramPage;
         private readonly WelcomeModePage _welcomeModePage;
         private readonly ChooseYourPlanWebPage _chooseYourPlanWebPage;
+        private readonly TrackMyCycleMainPage _trackMyCycleMainPage;
+        private readonly MainMenuPage _mainMenuPage;
 
 
         public TrackMyCycleSteps(ScenarioContext scenarioContext)
@@ -32,6 +35,8 @@ namespace FloAppiumTests.Steps
             _creatingYourPersonalProgramPage = new CreatingYourPersonalProgramPage(_driver);
             _welcomeModePage = new WelcomeModePage(_driver);
             _chooseYourPlanWebPage = new ChooseYourPlanWebPage(_driver);
+            _trackMyCycleMainPage = new TrackMyCycleMainPage(_driver);
+            _mainMenuPage = new MainMenuPage(_driver);
         }
 
         [When(@"I tap on Track my cycle button")]
@@ -92,6 +97,24 @@ namespace FloAppiumTests.Steps
         public void WhenITapOnChooseYourPlanXButton()
         {
             _chooseYourPlanWebPage.ClickCloseButton();
+        }
+
+        [Then(@"The message '(.*)' appears on the Track my cycle mode main page")]
+        public void ThenTheMessageAppearsOnTheTrackMyCycleModeMainPage(string pagePrimaryText)
+        {
+            Assert.AreEqual(pagePrimaryText, _trackMyCycleMainPage.GetPrimaryText());
+        }
+
+        [When(@"I tap on Track my cycle menu button")]
+        public void WhenITapOnTrackMyCycleMenuButton()
+        {
+            _trackMyCycleMainPage.ClickMenuButon();
+        }
+
+        [Then(@"Track cycle button selected")]
+        public void ThenTrackCycleButtonSelected()
+        {
+            Assert.AreEqual("true", _mainMenuPage.IsSelectedTrackCycleButton());
         }
     }
 }
