@@ -31,7 +31,7 @@ namespace FloAppiumTests.Drivers
                 appiumService.Start();
             }
 
-            _driver = new AndroidDriver<AndroidElement>(appiumService, driverOptions, TimeSpan.FromSeconds(100));
+            _driver = new AndroidDriver<AndroidElement>(appiumService, driverOptions, TimeSpan.FromSeconds(300));
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             return _driver;
         }
