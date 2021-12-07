@@ -10,12 +10,12 @@ namespace FloAppiumTests.Features
     [Binding]
     public class GetToWelcomeMenuSteps
     {
-
         private readonly ScenarioContext _scenarioContext;
         private readonly AppiumDriver<AndroidElement> _driver;
         private readonly StartPage _startPage;
         private readonly AllowToTrackPage _allowToTrackPage;
         private readonly WelcomePage _welcomePage;
+
         public GetToWelcomeMenuSteps(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
@@ -89,6 +89,5 @@ namespace FloAppiumTests.Features
             _startPage.ClickNextButton();
             _allowToTrackPage.ClickNoTrackLink();
         }
-
     }
 }

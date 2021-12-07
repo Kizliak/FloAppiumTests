@@ -161,6 +161,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I select only second of 2 needed checkboxes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+
 #line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
