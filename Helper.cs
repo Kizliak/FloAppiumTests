@@ -26,6 +26,7 @@ namespace FloAppiumTests
                 .Press(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 2)
                 .Wait(100)
                 .MoveTo(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 1.2)
+                .Wait(100)
                 .Release()
                 .Perform();
             return this;
