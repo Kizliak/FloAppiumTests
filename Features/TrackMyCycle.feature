@@ -5,7 +5,6 @@
 Background:
 	Given Welcome menu is open
 
-@mytag
 Scenario: Check if it is possible to run the app in the Track my cycle mode from the Welcome menu
 	When I tap on Track my cycle button
 	When I tap on I don't remember checkbox

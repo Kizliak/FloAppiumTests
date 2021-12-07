@@ -25,7 +25,7 @@ namespace FloAppiumTests
             new TouchAction(_driver)
                 .Press(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 2)
                 .Wait(100)
-                .MoveTo(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 1.3)
+                .MoveTo(elementXCoordinate + elementWidth / 2, elementYCoordinate + elementHeight / 1.2)
                 .Release()
                 .Perform();
             return this;

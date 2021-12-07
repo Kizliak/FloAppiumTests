@@ -13,7 +13,7 @@ namespace FloAppiumTests.Pages
             _driver = webDriver;
         }
 
-        private readonly By _closeButton = By.CssSelector("[elementId='00000000-0000-008f-0000-00070000012f']");
+        private readonly By _closeButton = By.CssSelector("[text='Close']");
 
         public ChooseYourPlanWebPage ClickCloseButton()
         {

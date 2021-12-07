@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow;
 using FloAppiumTests.Pages;
-using NUnit.Framework;
 
 namespace FloAppiumTests.Steps
 {
@@ -30,6 +29,7 @@ namespace FloAppiumTests.Steps
             _dontRememberLastPeriodFirstDayPage = new DontRememberLastPeriodFirstDayPage(_driver);
             _whatYearWereYouBornPage = new WhatYearWereYouBornPage(_driver);
             _startAppAnswersPage = new StartAppAnswersPage(_driver);
+            _creatingYourPersonalProgramPage = new CreatingYourPersonalProgramPage(_driver);
             _welcomeModePage = new WelcomeModePage(_driver);
             _chooseYourPlanWebPage = new ChooseYourPlanWebPage(_driver);
         }
@@ -83,7 +83,7 @@ namespace FloAppiumTests.Steps
         }
 
         [When(@"I tap on Welcome mode page Next button")]
-        public void WhenITapOnMeetFloNextButton()
+        public void WhenITapOnWelcomeModePageNextButton()
         {
             _welcomeModePage.ClickFeatureCardPrimaryActionButton();
         }

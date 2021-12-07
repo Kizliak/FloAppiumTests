@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
+using System;
 
 namespace FloAppiumTests.Pages
 {
@@ -12,6 +13,7 @@ namespace FloAppiumTests.Pages
         public StartAppAnswersPage(AppiumDriver<AndroidElement> webDriver)
         {
             _driver = webDriver;
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             _helper = new Helper(_driver);
         }
 
